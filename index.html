@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"> 
+        <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
+    <title>Tabs</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="btn-box">
+            <button id="btn1" onclick="openHTML()"><i class="fab fa-html5"></i>html</button>
+            <button id="btn2" onclick="openCSS()"><i class="fab fa-css3-alt"></i>css</button>
+            <button id="btn3" onclick="openJS()"><i class="fab fa-js"></i>javascript</button>
+        </div>
+        <div id="content1" class="content">
+            <div class="content-left">
+                <h1>Learn HTML</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolorem doloribus sapiente inventore eligendi debitis nulla dicta eveniet eius laudantium suscipit mollitia quos quasi quo sequi molestiae nesciunt neque quam voluptatibus, cupiditate voluptas aliquam vero maxime. Quasi, consectetur mollitia. Est maxime voluptate laborum! Rem perferendis similique, accusamus quidem quo repudiandae.</p>
+                <a href="#">Watch video</a>
+            </div>
+            <div class="content-right">
+                <h1></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis libero fugit commodi obcaecati quam iusto voluptas provident impedit deleniti odit?</p>
+            </div>
+        </div>
+        <div id="content2" class="content">
+            <div class="content-left">
+                <h1>Learn CSS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolorem doloribus sapiente inventore eligendi debitis nulla dicta eveniet eius laudantium suscipit mollitia quos quasi quo sequi molestiae nesciunt neque quam voluptatibus, cupiditate voluptas aliquam vero maxime. Quasi, consectetur mollitia. Est maxime voluptate laborum! Rem perferendis similique, accusamus quidem quo repudiandae.</p>
+                <a href="#">Watch video</a>
+            </div>
+            <div class="content-right">
+                <h1></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis libero fugit commodi obcaecati quam iusto voluptas provident impedit deleniti odit?</p>
+            </div>
+        </div>
+        <div id="content3" class="content">
+            <div class="content-left">
+                <h1>Learn javascript</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolorem doloribus sapiente inventore eligendi debitis nulla dicta eveniet eius laudantium suscipit mollitia quos quasi quo sequi molestiae nesciunt neque quam voluptatibus, cupiditate voluptas aliquam vero maxime. Quasi, consectetur mollitia. Est maxime voluptate laborum! Rem perferendis similique, accusamus quidem quo repudiandae.</p>
+                <a href="#">Watch video</a>
+            </div>
+            <div class="content-right">
+                <h1></h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis libero fugit commodi obcaecati quam iusto voluptas provident impedit deleniti odit?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHTML() {
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+
+            btn1.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+
+            content1.style.transition = "0.3s";
+            content2.style.transition = "0s";
+            content3.style.transition = "0s";
+        }
+
+        function openCSS() {
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+
+            btn1.style.color = "#000";
+            btn2.style.color = "#ff7846";
+            btn3.style.color = "#000";
+
+            content1.style.transition = "0s";
+            content2.style.transition = "0.3s";
+            content3.style.transition = "0s";
+        }
+
+        function openJS() {
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0)";
+
+            btn1.style.color = "#000";
+            btn2.style.color = "#000";
+            btn3.style.color = "#ff7846";
+
+            content1.style.transition = "0s";
+            content2.style.transition = "0s";
+            content3.style.transition = "0.3s";
+        }
+    
+    </script>
+</body>
+</html>
